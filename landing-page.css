@@ -2,7 +2,6 @@ body {
     padding-top: 50px;
     font-family: 'Semplicita-Pro-Regular';
     background: transparent;
-
 }
 
 @font-face {
@@ -26,7 +25,7 @@ h1 {
 }
 
 .navbar-brand {
-    text-size: 5em;
+    text-size: 25px;
 }
 
 #content {
