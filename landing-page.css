@@ -1,0 +1,31 @@
+body {
+    padding-top: 50px;
+    font-family: 'Semplicita-Pro-Regular';
+
+}
+
+@font-face {
+    font-family: 'Semplicita-Pro-Regular';
+    src: url('./fonts/Semplicita-Pro-Regular.ttf'); /*URL to font*/
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: 500;
+}
+
+.main {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#content {
+   text-align: center;
+   padding: 15%;
+   color: white;
+}
