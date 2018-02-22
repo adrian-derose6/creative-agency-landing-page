@@ -1,6 +1,7 @@
 body {
     padding-top: 50px;
     font-family: 'Semplicita-Pro-Regular';
+    background: transparent;
 
 }
 
@@ -15,17 +16,36 @@ h1 {
 }
 
 .main {
-    background-image: url('background.jpg');
+    background: url('./photos/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
+    height: 100%;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
 }
 
+.navbar-brand {
+    text-size: 5em;
+}
+
 #content {
    text-align: center;
    padding: 15%;
    color: white;
+}
+
+.navbar {
+    background: transparent;
+    border-width: 0;
+}
+
+.navbar.solid {
+  background-color: #490D40;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+}
+
+.second {
+    height: 2000px;
 }
