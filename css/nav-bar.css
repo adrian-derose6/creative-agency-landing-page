@@ -7,6 +7,13 @@
     z-index: 1030;
 }
 
+#top-nav.solid {
+  background-color: white;
+  transition: all .5s ease;
+  box-shadow: 0 0 4px grey;
+}
+
+
 #navigation {
     height: 65px;
 }
@@ -15,10 +22,15 @@
     float: left;
     line-height: 65px;
     transition: all .3s ease;
-    color: black;
+    color: white;
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 24px;
+    text-decoration: none !important;
+}
+
+.logo.colored-logo {
+    color: black;
 }
 
 .fixed-top {
@@ -57,6 +69,18 @@
     line-height: 20px;
     padding-left: 15px;
     padding-right: 15px; 
+    text-decoration: none !important;
+}
+
+.navigation-menu > li > a.colored-link {
+    color: black;
+    transition: all .3s ease;
+}
+
+.navigation-menu > li > a:hover {
+    text-decoration: none;
+    opacity: 0.8
+
 }
 
 .navigation-menu > li .submenu li a li {

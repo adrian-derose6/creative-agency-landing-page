@@ -55,8 +55,3 @@ h1 {
     background-color: blue;
 }
 
-#top-nav.solid {
-  background-color: white;
-  transition: all .5s ease;
-  box-shadow: 0 0 4px grey;
-}
