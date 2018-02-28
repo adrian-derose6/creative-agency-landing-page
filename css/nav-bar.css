@@ -8,9 +8,7 @@
 }
 
 #navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 65px;
 }
 
 .logo {
@@ -30,15 +28,15 @@
     left: 0;
 }
 
-.navigation {
-    display: block !important;
-}
-
 .navigation-menu {
     float: right;
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0 auto;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigation-menu > li {
