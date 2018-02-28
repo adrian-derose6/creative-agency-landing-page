@@ -1,0 +1,94 @@
+#top-nav {
+    background: transparent;
+    border-width: 0;
+    box-shadow: none;
+    transition: all .5s ease;
+    min-height: 65px;
+    z-index: 1030;
+}
+
+.logo {
+    float: left;
+    line-height: 65px;
+    transition: all .3s ease;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.navigation {
+    display: block !important;
+}
+
+.navigation-menu {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-menu > li {
+    float: left;
+    display: block;
+    position: relative;
+    margin: 0 5px;
+}
+
+.navigation-menu > li > a {
+    display: block;
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: all .3s ease;
+    line-height: 20px;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
+.navigation-menu > li .submenu li a li {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.menu-extras { 
+    float: right;
+}
+
+.has-submenu {
+    position: relative;
+}
+
+.navbar-toggle {
+    border: 0;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.navbar-toggle .lines {
+    width: 25px;
+    display: block;
+    position: relative;
+    margin: 28px auto;
+    height: 15px;
+}
+
+.navbar-toggle span {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    margin-bottom: 5px;
+    transition: transform .5s ease;
+}

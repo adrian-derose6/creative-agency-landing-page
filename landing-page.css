@@ -1,6 +1,6 @@
 body {
     padding-top: 50px;
-    font-family: 'Semplicita-Pro-Regular';
+    font-family: 'Roboto', sans-serif;
     background: transparent;
 }
 
@@ -24,9 +24,6 @@ h1 {
     top: 0;
 }
 
-.navbar-brand {
-    text-size: 25px;
-}
 
 #content {
    text-align: center;
@@ -34,14 +31,11 @@ h1 {
    color: white;
 }
 
-.navbar {
-    background: transparent;
-    border-width: 0;
-}
+
 
 .navbar.solid {
-  background-color: #490D40;
-  transition: background-color 1s ease 0s;
+  background-color: white;
+  transition: all .5s ease;
   box-shadow: 0 0 4px grey;
 }
 
