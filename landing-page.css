@@ -14,14 +14,37 @@ h1 {
     font-weight: 500;
 }
 
-.main {
+.bg-home {
     background: url('./photos/background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
+    background-position: center center;
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
+}
+
+.bg-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
     top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home-center {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.home-main-center {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 
@@ -31,9 +54,13 @@ h1 {
    color: white;
 }
 
+.section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: blue;
+}
 
-
-.navbar.solid {
+#top-nav.solid {
   background-color: white;
   transition: all .5s ease;
   box-shadow: 0 0 4px grey;

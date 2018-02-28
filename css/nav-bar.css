@@ -7,6 +7,12 @@
     z-index: 1030;
 }
 
+#navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo {
     float: left;
     line-height: 65px;
@@ -91,4 +97,27 @@
     display: block;
     margin-bottom: 5px;
     transition: transform .5s ease;
+}
+
+.navbar-toggle span:last-child {
+    margin-bottom: 0;
+}
+
+.navbar-toggle.open span {
+    position: absolute;
+}
+
+.navbar-toggle.open span:first-child {
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.navbar-toggle.open span:nth-child(2) {
+    visibility: hidden;
+}
+
+.navbar-toggle.open span:last-child {
+    width: 100%;
+    top: 6px;
+    transform: rotate(-45deg);
 }
