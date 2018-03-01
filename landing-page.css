@@ -8,8 +8,11 @@ body {
 }
 
 h1 {
-    font-size: 5em;
     font-weight: 500;
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    margin-top: 0;
 }
 
 .bg-home {
@@ -42,6 +45,20 @@ h1 {
     vertical-align: middle;
 }
 
+#company-caption {
+    font-size: 20px;
+    line-height: 1.8,
+    max-width: 400px;
+    color: rgb(255, 255, 255);
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 1.5rem;
+    margin-top: 0px;
+    margin-bottom: 1rem;
+    display: block;
+    padding-left: 10%;
+    padding-right: 10%;
+}
 
 #content {
    text-align: center;
@@ -53,5 +70,12 @@ h1 {
     padding-top: 80px;
     padding-bottom: 80px;
     background-color: blue;
+    height: 100%;
 }
 
+.separator {
+    margin: 25px 0;
+    height: 1px;
+    background: gray;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(gray), to(gray), color-stop(50%, white));
+}
