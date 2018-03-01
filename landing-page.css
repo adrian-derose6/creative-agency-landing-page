@@ -71,6 +71,7 @@ h1 {
     padding-bottom: 80px;
     background-color: blue;
     height: 100%;
+    border: 2px solid green;
 }
 
 .separator {
@@ -79,3 +80,20 @@ h1 {
     background: gray;
     background: -webkit-gradient(linear, 0 0, 100% 0, from(gray), to(gray), color-stop(50%, white));
 }
+
+#scroll-circle {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+
+
+}
+
+
