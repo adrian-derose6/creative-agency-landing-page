@@ -79,8 +79,7 @@
 
 .navigation-menu > li > a:hover {
     text-decoration: none;
-    opacity: 0.8
-
+    opacity: 0.8;
 }
 
 .navigation-menu > li .submenu li a li {

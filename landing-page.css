@@ -25,7 +25,7 @@ h1 {
 
 .bg-overlay {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     right: 0;
     left: 0;
@@ -75,10 +75,9 @@ h1 {
 }
 
 .separator {
-    margin: 25px 0;
-    height: 1px;
-    background: gray;
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(gray), to(gray), color-stop(50%, white));
+    border: 0;
+    height: 1.2px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
 
 #scroll-circle {
