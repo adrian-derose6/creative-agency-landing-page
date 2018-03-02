@@ -21,8 +21,6 @@ function toggleClass(elem, isClassSelected) {
     const HIGHLIGHT = 'link-highlight';
     var navLink = document.querySelector(`a[href="#${elem.getAttribute('id')}"]`);
 
-    console.log(`${elem.getAttribute('id')} - ${isClassSelected ? 'Selected' : 'Not selected'}`);
-
     if (isClassSelected && !navLink.classList.contains(HIGHLIGHT)) {
         navLink.classList.add(HIGHLIGHT);
     }
@@ -33,7 +31,6 @@ function toggleClass(elem, isClassSelected) {
 
 function scrollSpy() {
     var sectionsList = document.getElementsByTagName('section');
-    var navLinkList;
     var currentSection = 'home';
     toggleClass(sectionsList[0], currentSection === sectionsList[0].getAttribute('id'));
 
@@ -44,7 +41,6 @@ function scrollSpy() {
 
             if (elemRect.bottom > window.innerHeight * 0.5) {
                 currentSection = each.getAttribute("id");
-                console.log(currentSection);
                 break;
             }
         }
@@ -53,15 +49,70 @@ function scrollSpy() {
             let each = sectionsList[x];
             let isClassSelected = currentSection === each.getAttribute('id')
             toggleClass(each, isClassSelected);
-
         }
       
     };
 }
 
+
+function smoothScroll(element) {
+    window.scrollTo({
+        'behavior': 'smooth',
+        'left': 0,
+        'top': element.offsetTop
+    });
+}
+
+function scrollToSections () {
+    const btns = document.querySelectorAll('.navigation-menu li a');
+    const sections = document.querySelectorAll('section');
+    console.log(sections)
+
+    btns[0].addEventListener('click', function (event) {
+        event.preventDefault();
+        console.log('button clicked')
+        smoothScroll(sections[0]);
+        
+        event.stopPropagation();
+    }, false);
+
+    btns[1].addEventListener('click', function (event) {
+        event.preventDefault();
+        console.log('button clicked')
+        smoothScroll(sections[1]);
+        
+        event.stopPropagation();
+    }, false);
+
+    btns[2].addEventListener('click', function (event) {
+        event.preventDefault();
+        console.log('button clicked')
+        smoothScroll(sections[2]);
+        
+        event.stopPropagation();
+    }, false);
+
+    btns[3].addEventListener('click', function (event) {
+        event.preventDefault();
+        console.log('button clicked')
+        smoothScroll(sections[3]);
+        
+        event.stopPropagation();
+    }, false);
+
+    btns[4].addEventListener('click', function (event) {
+        event.preventDefault();
+        console.log('button clicked')
+        smoothScroll(sections[4]);
+        
+        event.stopPropagation();
+    }, false);
+
+}
+
 changeNavOpacity();
 scrollSpy();
-
+scrollToSections();
 
 
 

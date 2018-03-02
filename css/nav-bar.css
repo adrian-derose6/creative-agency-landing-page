@@ -16,6 +16,8 @@
 
 #navigation {
     height: 65px;
+    backface-visibility: hidden;
+    z-index: 1000;
 }
 
 .logo {
