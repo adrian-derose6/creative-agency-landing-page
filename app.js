@@ -17,52 +17,47 @@ function changeNavOpacity() {
     });
 }
 
-function getPosition(el) {
-  var xPos = 0;
-  var yPos = 0;
- 
-  while (el) {
-    if (el.tagName == "BODY") {
-      // deal with browser quirks with body/window/document and page scroll
-      var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
-      var yScroll = el.scrollTop || document.documentElement.scrollTop;
- 
-      xPos += (el.offsetLeft - xScroll + el.clientLeft);
-      yPos += (el.offsetTop - yScroll + el.clientTop);
-    } else {
-      // for all other non-BODY elements
-      xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
-      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+function toggleClass(elem, isClassSelected) {
+    const HIGHLIGHT = 'link-highlight';
+    var navLink = document.querySelector(`a[href="#${elem.getAttribute('id')}"]`);
+
+    console.log(`${elem.getAttribute('id')} - ${isClassSelected ? 'Selected' : 'Not selected'}`);
+
+    if (isClassSelected && !navLink.classList.contains(HIGHLIGHT)) {
+        navLink.classList.add(HIGHLIGHT);
     }
- 
-    el = el.offsetParent;
-  }
-  return {
-    x: xPos,
-    y: yPos
-  };
+    else if (!isClassSelected && navLink.classList.contains(HIGHLIGHT)) {
+        navLink.classList.remove(HIGHLIGHT);
+    } 
 }
 
 function scrollSpy() {
     var sectionsList = document.getElementsByTagName('section');
-    var currentSection = sectionsList[1];
+    var navLinkList;
+    var currentSection = 'home';
+    toggleClass(sectionsList[0], currentSection === sectionsList[0].getAttribute('id'));
 
-    console.log(sectionsList[0]);
+    window.onscroll = function() { 
+        for (var i = 0; i < sectionsList.length; i++) {
+            let each = sectionsList[i];
+            let elemRect = each.getBoundingClientRect();
 
+            if (elemRect.bottom > window.innerHeight * 0.5) {
+                currentSection = each.getAttribute("id");
+                console.log(currentSection);
+                break;
+            }
+        }
+        
+        for (var x = 0; x < sectionsList.length; x++) {
+            let each = sectionsList[x];
+            let isClassSelected = currentSection === each.getAttribute('id')
+            toggleClass(each, isClassSelected);
 
-   //window.onscroll = function() { 
-       // let scrollPosition = document.body.scrollTop;
-
-
-    //};  
+        }
+      
+    };
 }
-
-
-// Check current scroll position -- 
-// Check whether scroll is in section field
-// 
-
-
 
 changeNavOpacity();
 scrollSpy();

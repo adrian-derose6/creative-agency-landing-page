@@ -148,3 +148,8 @@
     height: 40px;
     color: white;
 }
+
+.link-highlight {
+    color: green !important;
+    transition: transform .5s ease;
+}

@@ -4,7 +4,7 @@ body {
 
 @font-face {
     font-family: 'Semplicita-Pro-Regular';
-    src: url('./fonts/Semplicita-Pro-Regular.ttf'); /*URL to font*/
+    src: url('./fonts/Semplicita-Pro-Regular.ttf');
 }
 
 h1 {
