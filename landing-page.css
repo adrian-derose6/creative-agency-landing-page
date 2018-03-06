@@ -67,10 +67,9 @@ h1 {
 }
 
 .section {
-    padding-bottom: 80px;
-    height: 100%;
+    padding-bottom: 70px;
     border: 2px solid green;
-    padding-top: 80px;
+    padding-top: 70px;
     position: relative;
 }
 
@@ -121,6 +120,10 @@ h1 {
     right: 0;
 }
 
+.window-size {
+    min-height: 100%;
+}
+
 .section-heading {
     border: 2px solid red;
     color: black;
@@ -131,4 +134,28 @@ h1 {
     text-align: center;
 }
 
+.header-bold {
+    font-weight: 700;
+}
+
+#service-grid {
+    padding-top: 4%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.grid-box {
+    height: 30%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.service-box {
+    border: 1px solid gray;
+    border-radius: 3px;
+    float: none;
+    height: 90%;
+    width: 98%;
+}
 
