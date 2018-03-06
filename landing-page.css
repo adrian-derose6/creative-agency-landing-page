@@ -15,6 +15,11 @@ h1 {
     margin-top: 0;
 }
 
+h3 {
+    font-weight: 700;
+    color: black;
+}
+
 .bg-home {
     background: url('./photos/background.jpg') no-repeat center center;
     background-size: cover;
@@ -68,10 +73,21 @@ h1 {
 
 .section {
     padding-bottom: 70px;
-    border: 2px solid green;
     padding-top: 70px;
     position: relative;
 }
+
+#home {
+    z-index: 0
+}
+
+#services {
+    z-index: 100;
+    -webkit-box-shadow: 0px -2px 118px 26px rgba(26,26,26,1);
+    -moz-box-shadow: 0px -2px 118px 26px rgba(26,26,26,1);
+    box-shadow: 0px -2px 118px 26px rgba(26,26,26,1);
+}
+
 
 .separator {
     border: 0;
@@ -107,17 +123,47 @@ h1 {
     color: black;
 }
 
-#scroll-circle {
-    width: 60px;
-    height: 60px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    margin: 0 auto;
+#circle-div {
     position: absolute;
     bottom: 5%;
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle-div p {
+ color: white;
+}
+
+#scroll-circle {
+    width: 45px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    z-index: 50;
+}
+
+#scroll-circle:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#chevron-down {
+    color: white;
+    font-size: 25px;
 }
 
 .window-size {
@@ -153,9 +199,18 @@ h1 {
 
 .service-box {
     border: 1px solid gray;
-    border-radius: 3px;
     float: none;
     height: 90%;
     width: 98%;
 }
 
+.service-icon-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+}

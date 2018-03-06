@@ -110,6 +110,22 @@ function scrollToSections () {
         event.stopPropagation();
     }, false);
 
+    btns[5].addEventListener('click', function (event) {
+        event.preventDefault();
+        console.log('button clicked')
+        smoothScroll(sections[5]);
+        
+        event.stopPropagation();
+    }, false);
+
+    document.querySelector('#scroll-circle').addEventListener("click", function (event) {
+        event.preventDefault();
+        console.log('button clicked')
+        smoothScroll(sections[1]);
+        
+        event.stopPropagation();
+    }, false);
+
 }
 
 changeNav();
