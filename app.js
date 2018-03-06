@@ -1,17 +1,19 @@
-function changeNavOpacity() {
+function changeNav() {
     $(document).ready(function() {
         $navLink = $('.navigation-menu > li > a');
         // Transition effect for navbar 
         $(window).scroll(function() {
-          // checks if window is scrolled more than 500px, adds/removes solid class
+          // checks if window is scrolled more than 50px, adds/removes solid class
           if($(this).scrollTop() > 50) { 
               $('#top-nav').addClass('solid');
               $navLink.addClass('colored-link');
-              $('.logo').addClass('colored-logo')
+              $('.logo').addClass('colored-logo');
+              $('#company-logo').attr('src', './photos/camera-shutter-black.png');
           } else {
               $('#top-nav').removeClass('solid');
               $navLink.removeClass('colored-link');
               $('.logo').removeClass('colored-logo');
+              $('#company-logo').attr('src', './photos/camera-shutter-white.png');
           }
         });
     });
@@ -110,7 +112,7 @@ function scrollToSections () {
 
 }
 
-changeNavOpacity();
+changeNav();
 scrollSpy();
 scrollToSections();
 

@@ -67,17 +67,45 @@ h1 {
 }
 
 .section {
-    padding-top: 80px;
     padding-bottom: 80px;
-    background-color: blue;
     height: 100%;
     border: 2px solid green;
+    padding-top: 80px;
+    position: relative;
 }
 
 .separator {
     border: 0;
     height: 1.2px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.separator-left {
+    border: 0;
+    height: 1px;
+    width: 75px;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.separator-right {
+    border: 0;
+    height: 1px;
+    width: 75px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 75), rgba(0, 0, 0, 0));    
+}
+
+.separator-div {
+    width: 200px;
+    height: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator-icon {
+    font-size: 15px;
+    color: black;
 }
 
 #scroll-circle {
@@ -91,8 +119,16 @@ h1 {
     bottom: 5%;
     left: 0;
     right: 0;
+}
 
+.section-heading {
+    border: 2px solid red;
+    color: black;
+}
 
+.header-div {
+    color: black;
+    text-align: center;
 }
 
 
