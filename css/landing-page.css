@@ -21,7 +21,7 @@ h3 {
 }
 
 .bg-home {
-    background: url('../photos/background.jpg') no-repeat center fixed;
+    background: url('../photos/background3.jpg') no-repeat center fixed;
     background-size: cover;
     height: 100%;
     background-position: center center;
@@ -75,6 +75,12 @@ h3 {
     padding-bottom: 70px;
     padding-top: 70px;
     position: relative;
+    border: 2px solid green;
+}
+
+.padding {
+    padding-bottom: 70px;
+    padding-top: 70px;
 }
 
 #home {
@@ -88,12 +94,24 @@ h3 {
 }
 
 #pricing {
-    background: url('../photos/background2.jpg') no-repeat center;
+    background: url('../photos/background5.jpg') no-repeat center fixed;
     background-size: cover;
-    height: 100%;
+    min-height: 150%;
     background-position: center center;
     margin-top: 0;
     color: white; 
+    padding: 0 !important;
+}
+
+#pricing-bg-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    min-height: 100%;  
+    padding-bottom: 70px;  
+}
+
+#pricing-header {
+    color: white;
 }
 
 #features {
@@ -104,11 +122,23 @@ h3 {
     z-index: 1000;
 }
 
+.price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 .separator {
     border: 0;
     height: 1.2px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.separator-dark {
+    border: 0;
+    height: 1.2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 .separator-left {
@@ -125,6 +155,20 @@ h3 {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 75), rgba(0, 0, 0, 0));    
 }
 
+.separator-right-white {
+    border: 0;
+    height: 1px;
+    width: 75px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 75), rgba(255, 255, 255, 0));
+}
+
+.separator-left-white {
+    border: 0;
+    height: 1px;
+    width: 75px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
 .separator-div {
     width: 200px;
     height: 20px;
@@ -137,6 +181,11 @@ h3 {
 .separator-icon {
     font-size: 15px;
     color: black;
+}
+
+.separator-icon-white {
+    font-size: 15px;
+    color: white;
 }
 
 #circle-div {
@@ -234,21 +283,114 @@ h3 {
     height: 60px;
 }
 
-.price-grid-box {
+.price-grid-box-large {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    height: 85%;
-    border: 1px solid green;
+    min-height: 95%;
+}
+
+.price-grid-box-small {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 90%;
+}
+
+#left-price-box {
+    
+}
+
+#middle-price-box {
+    z-index: 1000;
+}
+
+.package-name {
+    color: white !important;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.9em;
+    
+}
+
+#right-price-box {
+  
 }
 
 .price-box {
-    border: 1px solid gray;
     float: none;
-    height: 90%;
-    width: 95%;
-    -webkit-box-shadow: 11px 9px 18px -12px rgba(26,26,26,0.73);
-    -moz-box-shadow: 11px 9px 18px -12px rgba(26,26,26,0.73);
-    box-shadow: 11px 9px 18px -12px rgba(26,26,26,0.73);  
-    background: white; 
+    min-height: 100%;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 16px 1px rgba(51,51,51,1);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(51,51,51,1);
+    box-shadow: 0px 0px 16px 1px rgba(20,20,20,1); 
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('../photos/sprinkles.png') repeat;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.price-circle {
+    color: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+#gold {
+    background: rgba(212, 175, 55, 0.6);
+}
+
+#bronze {
+    background: rgba(205, 127, 50, 0.6);
+}
+
+#silver {
+    background: rgba(192, 192, 192, 0.6);
+}
+
+.price {
+    font-weight: 800;
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.price-row {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.price-button-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.price-button {
+    border: 1px white solid;
+    width: 300px; 
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    z-index: 50;
+}
+
+.price-button:hover {
+    cursor: pointer;
+    opacity: 0.5
 }

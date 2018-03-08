@@ -19,7 +19,7 @@
     <body>
 
     <!-- Navigation Bar -->
-        <nav id="top-nav" class="defaultscroll fixed-top sticky">
+        <nav id="top-nav" class="defaultscroll fixed-top sticky border">
             <div class="container">
                 <div>
                     <a href="index.html" class="logo text-uppercase">
@@ -96,7 +96,7 @@
             <div class="container">
                 <div class="row">
                     <div class="header-div col-xs-6 center-block" style="float: none;">
-                        <h2>Our <span class="header-bold">Services</span></h2>
+                        <h2>OUR <span class="header-bold">SERVICES</span></h2>
                         <div class="separator-div">
                             <hr class="separator-left">
                             <i class="fas fa-adjust separator-icon"></i>
@@ -110,7 +110,7 @@
             <div class="container">
                 <div class="row">
                     <div class="header-div col-xs-6 center-block" style="float: none;">
-                        <h2>Service <span class="header-bold">Features</span></h2>
+                        <h2>SERVICE <span class="header-bold">FEATURES</span></h2>
                         <div class="separator-div">
                             <hr class="separator-left">
                             <i class="fas fa-adjust separator-icon"></i>
@@ -167,7 +167,7 @@
             <div class="container">
                 <div class="row">
                     <div class="header-div col-xs-6 center-block" style="float: none;">
-                        <h2>Our <span class="header-bold">Team</span></h2>
+                        <h2>OUR <span class="header-bold">TEAM</span></h2>
                         <div class="separator-div">
                             <hr class="separator-left">
                             <i class="fas fa-adjust separator-icon"></i>
@@ -181,7 +181,7 @@
             <div class="container">
                 <div class="row">
                     <div class="header-div col-xs-6 center-block" style="float: none;">
-                        <h2>Our <span class="header-bold">Clients</span></h2>
+                        <h2>OUR <span class="header-bold">CLIENTS</span></h2>
                         <div class="separator-div">
                             <hr class="separator-left">
                             <i class="fas fa-adjust separator-icon"></i>
@@ -191,62 +191,114 @@
                 </div>
             </div>
         </section>
-        <section class="section window-size" id="pricing">
-            <div class="container">
-                <div class="row">
-                    <div class="header-div col-xs-6 center-block" style="float: none;">
-                        <h2>Our <span class="header-bold">Pricing</span></h2>
-                        <div class="separator-div">
-                            <hr class="separator-left">
-                            <i class="fas fa-adjust separator-icon"></i>
-                            <hr class="separator-right">
+        <section class="window-size " id="pricing">
+            <div class="padding" id="pricing-bg-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-div col-xs-6 center-block" id="pricing-header" style="float: none;">
+                            <h2>OUR <span class="header-bold">PRICING</span></h2>
+                            <div class="separator-div">
+                                <hr class="separator-left-white">
+                                <i class="fas fa-adjust separator-icon-white"></i>
+                                <hr class="separator-right-white">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container main-content" >
-                <div class="row">
-                    <div class="col-md-4 col-xs-12 price-grid-box">
-                        <div class="price-box">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class='col-md-3 service-icon-div' style="border: 1px solid red; height: 100%;">
-                                       
-                                    </div>
-                                    <div class='col-md-9' style="border: 1px solid blue;">
-                                        
+                <div class="container main-content" >
+                    <div class="row price-container">
+                        <div class="col-lg-4 col-xs-12 price-grid-box-small">
+                            <div class="price-box" id="left-price-box">
+                                <h3 class="package-name">Basic</h3>
+                                <hr class="separator">
+                                <div class="price-circle" id="bronze">
+                                    <h3 class="price">$50</h3>
+                                </div>
+                                <hr class="separator">
+                                <h4 class="price-row">100 photos</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Basic Editting</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Basic Framing</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Lorem ipsem</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Lorem ipsem</h4>
+                                <hr class="separator">
+                                <div class="price-button-div">
+                                    <div class="price-button">
+                                        GET STARTED
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-4 col-xs-12 price-grid-box-large" >
+                            <div class="price-box" id="middle-price-box">
+                                <h3 class="package-name">Deluxe</h3>
+                                <hr class="separator">
+                                <div class="price-circle" id="gold">
+                                    <h3 class="price">$150</h3>
+                                </div>
+                                <hr class="separator">
+                                <h4 class="price-row">1000 photos</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Advanced Editting</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Lorem ipsem</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Lorem ipsem</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Lorem ipsem</h4>
+                                <hr class="separator">
+                                <div class="price-button-div">
+                                    <div class="price-button">
+                                        GET STARTED
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="col-lg-4 col-xs-12 price-grid-box-small">
+                            <div class="price-box" id="right-price-box">
+                                <h3 class="package-name">Economy</h3>
+                                <hr class="separator">
+                                <div class="price-circle" id="silver">
+                                    <h3 class="price">$100</h3>
+                                </div>
+                                <hr class="separator">
+                                <h4 class="price-row">500 photos</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Lorem ipsem</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Lorem ipsem</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Lorem ipsem</h4>
+                                <hr class="separator">
+                                <h4 class="price-row">Lorem ipsem</h4>
+                                <hr class="separator">
+                                <div class="price-button-div">
+                                    <div class="price-button">
+                                        GET STARTED
+                                    </div>
+                                </div>
+                            </div>                    
+                        </div>                                     
                     </div>
-                    <div class="col-md-4 col-xs-12 price-grid-box">
-                        <div class="price-box">
-
-                        </div>                        
-                    </div>
-                    <div class="col-md-4 col-xs-12 price-grid-box">
-                        <div class="price-box">
-
-                        </div>                    
-                    </div>                                     
                 </div>
-            </div>
-        </section>
-        <section class="section window-size" id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="header-div col-xs-6 center-block" style="float: none;">
-                        <h2>Get in <span class="header-bold">Touch</span></h2>
-                        <div class="separator-div">
-                            <hr class="separator-left">
-                            <i class="fas fa-adjust separator-icon"></i>
-                            <hr class="separator-right">
+            </section>
+            <section class="section window-size" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-div col-xs-6 center-block" style="float: none;">
+                            <h2>GET IN <span class="header-bold">TOUCH</span></h2>
+                            <div class="separator-div">
+                                <hr class="separator-left">
+                                <i class="fas fa-adjust separator-icon"></i>
+                                <hr class="separator-right">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </div>     
         </section>
 
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>

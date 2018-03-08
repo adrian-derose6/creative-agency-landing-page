@@ -6,11 +6,13 @@ function changeNav() {
           // checks if window is scrolled more than 50px, adds/removes solid class
           if($(this).scrollTop() > 50) { 
               $('#top-nav').addClass('solid');
+              $('#top-nav').removeClass('border');
               $navLink.addClass('colored-link');
               $('.logo').addClass('colored-logo');
               $('#company-logo').attr('src', './photos/camera-shutter-black.png');
           } else {
               $('#top-nav').removeClass('solid');
+              $('#top-nav').addClass('border');
               $navLink.removeClass('colored-link');
               $('.logo').removeClass('colored-logo');
               $('#company-logo').attr('src', './photos/camera-shutter-white.png');
