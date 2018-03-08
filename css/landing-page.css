@@ -4,7 +4,7 @@ body {
 
 @font-face {
     font-family: 'Semplicita-Pro-Regular';
-    src: url('./fonts/Semplicita-Pro-Regular.ttf');
+    src: url('../fonts/Semplicita-Pro-Regular.ttf');
 }
 
 h1 {
@@ -21,7 +21,7 @@ h3 {
 }
 
 .bg-home {
-    background: url('./photos/background.jpg') no-repeat center fixed;
+    background: url('../photos/background.jpg') no-repeat center fixed;
     background-size: cover;
     height: 100%;
     background-position: center center;
@@ -88,7 +88,7 @@ h3 {
 }
 
 #pricing {
-    background: url('./photos/background2.jpg') no-repeat center;
+    background: url('../photos/background2.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
     background-position: center center;
