@@ -118,6 +118,14 @@ function scrollToSections () {
         event.stopPropagation();
     }, false);
 
+    btns[6].addEventListener('click', function (event) {
+        event.preventDefault();
+        console.log('button clicked')
+        smoothScroll(sections[6]);
+        
+        event.stopPropagation();
+    }, false);
+
     document.querySelector('#scroll-circle').addEventListener("click", function (event) {
         event.preventDefault();
         console.log('button clicked')

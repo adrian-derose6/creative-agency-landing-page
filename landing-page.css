@@ -21,7 +21,7 @@ h3 {
 }
 
 .bg-home {
-    background: url('./photos/background.jpg') no-repeat center center;
+    background: url('./photos/background.jpg') no-repeat center fixed;
     background-size: cover;
     height: 100%;
     background-position: center center;
@@ -78,14 +78,30 @@ h3 {
 }
 
 #home {
-    z-index: 0
+    z-index: -100
 }
 
 #services {
-    z-index: 100;
     -webkit-box-shadow: 0px -2px 118px 26px rgba(26,26,26,1);
     -moz-box-shadow: 0px -2px 118px 26px rgba(26,26,26,1);
     box-shadow: 0px -2px 118px 26px rgba(26,26,26,1);
+}
+
+#pricing {
+    background: url('./photos/background2.jpg') no-repeat center;
+    background-size: cover;
+    height: 100%;
+    background-position: center center;
+    margin-top: 0;
+    color: white; 
+}
+
+#features {
+    z-index: 1000;
+}
+
+#team {
+    z-index: 1000;
 }
 
 
@@ -184,7 +200,7 @@ h3 {
     font-weight: 700;
 }
 
-#service-grid {
+.main-content {
     padding-top: 4%;
     padding-left: 2%;
     padding-right: 2%;
@@ -202,6 +218,9 @@ h3 {
     float: none;
     height: 90%;
     width: 98%;
+    -webkit-box-shadow: 11px 9px 18px -12px rgba(26,26,26,0.73);
+    -moz-box-shadow: 11px 9px 18px -12px rgba(26,26,26,0.73);
+    box-shadow: 11px 9px 18px -12px rgba(26,26,26,0.73);
 }
 
 .service-icon-div {
@@ -213,4 +232,23 @@ h3 {
 .service-icon {
     width: 60px;
     height: 60px;
+}
+
+.price-grid-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 85%;
+    border: 1px solid green;
+}
+
+.price-box {
+    border: 1px solid gray;
+    float: none;
+    height: 90%;
+    width: 95%;
+    -webkit-box-shadow: 11px 9px 18px -12px rgba(26,26,26,0.73);
+    -moz-box-shadow: 11px 9px 18px -12px rgba(26,26,26,0.73);
+    box-shadow: 11px 9px 18px -12px rgba(26,26,26,0.73);  
+    background: white; 
 }
