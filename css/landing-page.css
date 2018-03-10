@@ -75,7 +75,6 @@ h3 {
     padding-bottom: 70px;
     padding-top: 70px;
     position: relative;
-    border: 2px solid green;
 }
 
 .padding {
@@ -118,11 +117,12 @@ h3 {
 }
 
 #team {
-    z-index: 1000;
+  
 }
 
 .carousel {
     z-index: 1000;
+    height: 400px;
 }
 
 .img-fluid {
@@ -301,13 +301,14 @@ h3 {
 
 .team-box {
     width: 95%;
-    height: 85%;
+    height: 95%;
     margin: auto;
     background-color: gray;
     background-size: cover;
     background-position: center;
     display: flex;
-
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 #team1 {
@@ -333,6 +334,7 @@ h3 {
 #team6 {
     background-image: url("../photos/team/portrait6.jpg");
 }
+
 
 .team-overlay {
     height: 100%;
@@ -383,8 +385,49 @@ h3 {
 }
 
 .social-media-icon:hover {
-    opacity: 0.3
+    opacity: 1
 }
+
+.arrow-button {
+    width: 40px;
+    height: 65px;
+    background: black;
+    border-width: 0.5px;
+    border-color: white;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0.2;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.arrow-button:hover {
+    opacity: 0.6
+}
+
+.arrow-prev {
+    position: absolute;
+    top: 52%;
+    bottom: 48%;
+}
+.arrow-next {
+    position: absolute;
+    top: 52%;
+    bottom: 48%;
+}
+
+.chevron {
+    color: white;
+    font-size: 20px;
+}
+
 
 
 .price-grid-box-large {
