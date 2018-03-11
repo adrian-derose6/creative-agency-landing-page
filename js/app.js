@@ -58,89 +58,26 @@ function scrollSpy() {
     };
 }
 
+function smoothScrollLink() {
+    var $root = $('html, body');
 
-function smoothScroll(element) {
-    window.scrollTo({
-        'behavior': 'smooth',
-        'left': 0,
-        'top': element.offsetTop
+    $('a[href^="#"]').click(function () {
+        $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 1000);
+
+        return false;
     });
 }
 
-function scrollToSections () {
-    const btns = document.querySelectorAll('.navigation-menu li a');
-    const sections = document.querySelectorAll('section');
-    console.log(sections)
 
-    btns[0].addEventListener('click', function (event) {
-        event.preventDefault();
-        console.log('button clicked')
-        smoothScroll(sections[0]);
-        
-        event.stopPropagation();
-    }, false);
+$(document).ready(function() {
+    changeNav();
+    scrollSpy();
+    smoothScrollLink();
+});
 
-    btns[1].addEventListener('click', function (event) {
-        event.preventDefault();
-        console.log('button clicked')
-        smoothScroll(sections[1]);
-        
-        event.stopPropagation();
-    }, false);
 
-    btns[2].addEventListener('click', function (event) {
-        event.preventDefault();
-        console.log('button clicked')
-        smoothScroll(sections[2]);
-        
-        event.stopPropagation();
-    }, false);
-
-    btns[3].addEventListener('click', function (event) {
-        event.preventDefault();
-        console.log('button clicked')
-        smoothScroll(sections[3]);
-        
-        event.stopPropagation();
-    }, false);
-
-    btns[4].addEventListener('click', function (event) {
-        event.preventDefault();
-        console.log('button clicked')
-        smoothScroll(sections[4]);
-        
-        event.stopPropagation();
-    }, false);
-
-    btns[5].addEventListener('click', function (event) {
-        event.preventDefault();
-        console.log('button clicked')
-        smoothScroll(sections[5]);
-        
-        event.stopPropagation();
-    }, false);
-
-    btns[6].addEventListener('click', function (event) {
-        event.preventDefault();
-        console.log('button clicked')
-        smoothScroll(sections[6]);
-        
-        event.stopPropagation();
-    }, false);
-
-    document.querySelector('#scroll-circle').addEventListener("click", function (event) {
-        event.preventDefault();
-        console.log('button clicked')
-        smoothScroll(sections[1]);
-        
-        event.stopPropagation();
-    }, false);
-
-}
-
-changeNav();
-scrollSpy();
-scrollToSections();
 
 
 
