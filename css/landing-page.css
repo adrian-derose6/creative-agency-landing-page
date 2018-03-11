@@ -272,8 +272,7 @@ h3 {
 }
 
 .about-grid-box {
-    border: 1px solid red;
-    height: 60%;
+    min-height: 50%;
     padding: 3%;
     display: flex;
     flex-direction: column;
@@ -281,9 +280,65 @@ h3 {
     align-items: center;
 }
 
+#about-image1 {
+    background-color: gray;
+    background-image: url('../photos/equipment.jpg');
+    background-position: center;
+    background-size: cover;
+    -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
 .about-caption {
     text-align: center;
     font-weight: 800;
+    font-size: 1.9em;
+    color: black;
+}
+
+.about-separator {
+    width: 70px;
+    background-color: black;
+    height: 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about-description {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.read-more-button {
+    height: 40px;
+    width: 120px;
+    margin-top: 2%;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-transition: background 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out;
+    -ms-transition: background 0.5s ease-in-out;
+    -o-transition: background 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out;
+    -ms-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+    background: transparent;
+}
+
+.read-more-button:hover {
+    background: black;
+    color: white;
 }
 
 .service-box {
