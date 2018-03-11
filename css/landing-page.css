@@ -271,6 +271,21 @@ h3 {
     justify-content: center;
 }
 
+.about-grid-box {
+    border: 1px solid red;
+    height: 60%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-caption {
+    text-align: center;
+    font-weight: 800;
+}
+
 .service-box {
     border: 1px solid gray;
     float: none;
