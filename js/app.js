@@ -63,8 +63,8 @@ function smoothScrollLink() {
 
     $('a[href^="#"]').click(function () {
         $root.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 1000);
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 1500, 'easeInOutExpo');
 
         return false;
     });
