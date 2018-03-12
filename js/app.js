@@ -1,23 +1,22 @@
 function changeNav() {
-    $(document).ready(function() {
-        $navLink = $('.navigation-menu > li > a');
-        // Transition effect for navbar 
-        $(window).scroll(function() {
-          // checks if window is scrolled more than 50px, adds/removes solid class
-          if($(this).scrollTop() > 50) { 
-              $('#top-nav').addClass('solid');
-              $('#top-nav').removeClass('border');
-              $navLink.addClass('colored-link');
-              $('.logo').addClass('colored-logo');
-              $('#company-logo').attr('src', './photos/camera-shutter-black.png');
-          } else {
-              $('#top-nav').removeClass('solid');
-              $('#top-nav').addClass('border');
-              $navLink.removeClass('colored-link');
-              $('.logo').removeClass('colored-logo');
-              $('#company-logo').attr('src', './photos/camera-shutter-white.png');
-          }
-        });
+    $navLink = $('.navigation-menu > li > a');
+    $window = $(window);
+    // Transition effect for navbar 
+    $window.scroll(function() {
+        // checks if window is scrolled more than 50px, adds/removes solid class
+        if($(this).scrollTop() > 50) { 
+            $('#top-nav').addClass('solid');
+            $('#top-nav').removeClass('border');
+            $navLink.addClass('colored-link');
+            $('.logo').addClass('colored-logo');
+            $('#company-logo').attr('src', './photos/camera-shutter-black.png');
+        } else {
+            $('#top-nav').removeClass('solid');
+            $('#top-nav').addClass('border');
+            $navLink.removeClass('colored-link');
+            $('.logo').removeClass('colored-logo');
+            $('#company-logo').attr('src', './photos/camera-shutter-white.png');
+        }
     });
 }
 
@@ -68,6 +67,40 @@ function smoothScrollLink() {
 
         return false;
     });
+
+    $('#scroll-circle').click(function () {
+        $root.animate({
+            scrollTop: $("#scroll-circle").offset().top + 65
+        }, 1500, 'easeInOutExpo');
+
+        return false;
+    });
+}
+
+function animationScroll() {
+    //Cache reference to window and animation items
+    var animationElements = document.querySelectorAll('.animation-element')
+    var $window = $(window);
+
+    $window.on('scroll resize', function() {
+        for (var i = 0; i < animationElements.length; i++) {
+            if (isInViewport(animationElements[i]) && !animationElements[i].classList.contains('.in-view')) {
+                animationElements[i].classList.add('in-view');
+            }
+        }
+    });
+}
+
+// Determine if an element is in the visible viewport
+function isInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  var html = document.documentElement;
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || html.clientHeight) &&
+    rect.right <= (window.innerWidth || html.clientWidth)
+  );
 }
 
 
@@ -75,6 +108,7 @@ $(document).ready(function() {
     changeNav();
     scrollSpy();
     smoothScrollLink();
+    animationScroll();
 });
 
 

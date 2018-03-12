@@ -20,6 +20,53 @@ h3 {
     color: black;
 }
 
+.animation-element {
+    position: relative;
+    visibility: hidden;
+}
+
+.animation-element.fade-in-left.in-view {
+    -webkit-animation-duration: 1s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    visibility: visible;
+}
+
+.animation-element.fade-in-right.in-view {
+    -webkit-animation-duration: 1s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    visibility: visible;
+}
+
+@keyframes fadeInLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+} 
+
+@keyframes fadeInRight {
+   0% {
+      opacity: 0;
+      transform: translateX(20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+} 
+
 .bg-home {
     background: url('../photos/background5.jpg') no-repeat center fixed;
     background-size: cover;
@@ -31,6 +78,13 @@ h3 {
 .bg-overlay {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('../photos/base-header-overlay.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: border-box;
     top: 0;
     right: 0;
     left: 0;
@@ -105,7 +159,14 @@ h3 {
 #pricing-bg-overlay {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-    min-height: 100%;   
+    min-height: 100%;  
+    background-image: url('../photos/base-header-overlay.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: border-box; 
 }
 
 #pricing-header {
@@ -277,15 +338,22 @@ h3 {
 }
 
 .about-grid-box {
-    min-height: 55%;
+    min-height: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#about-image1 {
+.about-image-container {
+    height: 350px;
+    width: auto;
+}
 
+.about-image {
+    resize: contain;
+    height: 100%;
+    width: auto;
 }
 
 .about-caption {
@@ -474,7 +542,7 @@ h3 {
     transition: opacity 0.5s ease-in-out;
     opacity: 0.2;
     cursor: pointer;
-    z-index: 2000;
+    z-index: 1100;
 }
 
 .arrow-button:hover {
